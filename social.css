@@ -1,0 +1,52 @@
+.social-wall {
+  min-height: 920px;
+  display: grid;
+  grid-template-columns: .7fr 1.3fr;
+  align-items: center;
+  gap: 5vw;
+  padding: 110px clamp(24px, 6vw, 90px);
+  overflow: hidden;
+  background: #fff;
+}
+.social-copy { position: relative; z-index: 2; }
+.social-copy h2 em { color: var(--taupe); font-weight: 400; }
+.social-copy > p:last-of-type { max-width: 390px; margin: 28px 0; color: #6d675f; line-height: 1.75; }
+.social-float { position: relative; height: 700px; }
+.insta-card {
+  position: absolute;
+  display: block;
+  padding: 10px 10px 35px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(49, 43, 36, .16);
+  text-decoration: none;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.insta-card:hover, .insta-card:focus-visible { z-index: 5; box-shadow: 0 25px 65px rgba(49, 43, 36, .24); }
+.insta-card img { width: 100%; height: 100%; display: block; object-fit: cover; transform: rotate(90deg) scale(1.36); }
+.insta-card span { position: absolute; left: 12px; bottom: 10px; font-size: 8px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.insta-one { left: 3%; top: 10%; width: 290px; height: 350px; transform: rotate(-7deg); }
+.insta-one:hover { transform: rotate(-3deg) translateY(-8px); }
+.insta-two { right: 4%; top: 0; width: 260px; height: 315px; transform: rotate(5deg); }
+.insta-two:hover { transform: rotate(2deg) translateY(-8px); }
+.insta-three { left: 32%; top: 31%; width: 315px; height: 380px; transform: rotate(2deg); z-index: 3; }
+.insta-three:hover { transform: rotate(0) translateY(-8px); }
+.insta-four { left: 0; bottom: 0; width: 250px; height: 305px; transform: rotate(6deg); }
+.insta-four:hover { transform: rotate(2deg) translateY(-8px); }
+.insta-five { right: 1%; bottom: 2%; width: 270px; height: 330px; transform: rotate(-6deg); }
+.insta-five:hover { transform: rotate(-2deg) translateY(-8px); }
+@media (max-width: 900px) {
+  .social-wall { grid-template-columns: 1fr; gap: 45px; }
+  .social-copy { max-width: 520px; }
+  .social-float { height: 680px; }
+}
+@media (max-width: 600px) {
+  .social-wall { min-height: auto; padding: 85px 22px; }
+  .social-float { height: 590px; margin-inline: -15px; }
+  .insta-card { padding: 7px 7px 29px; }
+  .insta-one { left: 2%; top: 6%; width: 180px; height: 220px; }
+  .insta-two { right: 1%; top: 2%; width: 165px; height: 205px; }
+  .insta-three { left: 20%; top: 31%; width: 195px; height: 240px; }
+  .insta-four { left: 0; bottom: 2%; width: 165px; height: 205px; }
+  .insta-five { right: 0; bottom: 0; width: 175px; height: 215px; }
+}
